@@ -33,18 +33,27 @@ export default function Home() {
   return (
     <div className="space-y-8">
       {/* ヒーロー */}
-      <section className="space-y-3">
+      <section
+        className="
+          space-y-3
+          rounded-2xl border border-white/10 bg-zinc-900/95 px-4 py-4
+          sm:border-0 sm:bg-transparent sm:px-0 sm:py-0
+        "
+      >
         <p className="text-[0.7rem] uppercase tracking-[0.25em] text-zinc-200 sm:text-zinc-400">
           Playground
         </p>
-        <h2 className="text-3xl font-semibold text-zinc-100 leading-tight md:text-4xl">
+
+        <h2 className="text-3xl font-semibold text-zinc-50 leading-tight md:text-4xl">
           これは試しサイト集です。
         </h2>
+
         <p className="max-w-xl text-[0.95rem] leading-relaxed text-zinc-100 sm:text-zinc-200">
           Next.js とか React の機能を試しながら、遊びで作っているページたち。
           下のカードから好きなサイトに飛べるようにしてある。
         </p>
       </section>
+
 
       {/* リンクカード */}
       <section className="grid gap-4 md:grid-cols-3">
