@@ -57,7 +57,6 @@ export default function NewsLayout({ children }: { children: ReactNode }) {
       {/* フッター */}
       <footer className="mt-8 border-t border-white/10 pb-6 pt-4 text-center text-xs text-zinc-500">
         <span className="text-zinc-400">Built with Next.js & Tailwind ·</span>{" "}
-        <span className="text-zinc-300"> 夜更かしニュース by ライア & 僕</span>
       </footer>
     </div>
   );
