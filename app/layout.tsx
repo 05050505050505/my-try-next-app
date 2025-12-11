@@ -14,27 +14,56 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="min-h-screen bg-gradient-to-b from-zinc-950 via-slate-950 to-zinc-900 text-zinc-50 antialiased">
-        <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-6">
-          {/* ここは全ページ共通のベース。重いヘッダーは置かない */}
-          <header className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
+      <body
+        className="
+          min-h-screen 
+          bg-gradient-to-b 
+          from-black via-zinc-950 to-zinc-900
+          text-zinc-50 
+          antialiased
+        "
+      >
+        {/* 背景にうっすらノイズを追加（読みやすくするため） */}
+        <div className="pointer-events-none fixed inset-0 bg-[url('/noise.png')] opacity-[0.08]" />
+
+        <div className="relative mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-6">
+          {/* ===== Header ===== */}
+          <header
+            className="
+              mb-6 flex items-center justify-between 
+              border-b border-white/10 
+              pb-4
+              backdrop-blur-sm
+              sm:bg-white/5 sm:rounded-xl sm:px-4 sm:py-3
+            "
+          >
             <div>
-              <h1 className="text-lg font-semibold tracking-wide text-zinc-50">
-                Playground
-              </h1>
+              <h1 className="text-lg font-semibold tracking-wide">Playground</h1>
               <p className="text-xs text-zinc-400">
-                Next.js でいろいろ遊んでる実験スペース
+                Next.js でいろいろ遊んでいるスペース
               </p>
             </div>
-            <span className="rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
+
+            <span
+              className="
+                rounded-full
+                border border-emerald-400/50
+                bg-emerald-400/10
+                px-3 py-1 
+                text-xs text-emerald-200
+                shadow-[0_0_8px_rgba(16,185,129,0.35)]
+              "
+            >
               hobby / sandbox
             </span>
           </header>
 
+          {/* ===== Main ===== */}
           <main className="flex-1 py-2">{children}</main>
 
-          <footer className="mt-6 border-t border-white/10 pt-3 text-center text-xs text-zinc-500">
-            © {new Date().getFullYear()} Raia&apos;s Playground
+          {/* ===== Footer ===== */}
+          <footer className="mt-8 border-t border-white/10 pt-4 text-center text-xs text-zinc-500">
+            © {new Date().getFullYear()} Playground
           </footer>
         </div>
       </body>
