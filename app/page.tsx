@@ -34,13 +34,13 @@ export default function Home() {
     <div className="space-y-8">
       {/* ヒーロー */}
       <section className="space-y-3">
-        <p className="text-xs uppercase tracking-[0.35em] text-zinc-300 sm:text-zinc-400">
+        <p className="text-[0.7rem] uppercase tracking-[0.25em] text-zinc-200 sm:text-zinc-400">
           Playground
         </p>
-        <h2 className="text-3xl font-semibold text-zinc-50 md:text-4xl">
+        <h2 className="text-3xl font-semibold text-zinc-100 leading-tight md:text-4xl">
           これは試しサイト集です。
         </h2>
-        <p className="max-w-xl text-sm text-zinc-200 sm:text-zinc-300">
+        <p className="max-w-xl text-[0.95rem] leading-relaxed text-zinc-100 sm:text-zinc-200">
           Next.js とか React の機能を試しながら、遊びで作っているページたち。
           下のカードから好きなサイトに飛べるようにしてある。
         </p>
